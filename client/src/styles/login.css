@@ -1,0 +1,63 @@
+.form-controls{
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+    background-color: transparent;
+}
+.form-controls:focus{
+    outline: none;
+    background-color: transparent;
+}
+.back{
+    background: linear-gradient(to bottom,rgb(59, 240, 234),white,rgb(248, 192, 201));
+    height: 100vh;
+}
+.forms{
+    border: 2px solid black;
+    box-shadow: 0px 0px 8px -7px red;
+    padding: 10px;
+    margin-bottom: 30px;
+    background: white;
+    margin-right:20px;
+    margin-left:20px;
+}
+.formss{
+    border: 2px solid black;
+    box-shadow: 0px 0px 8px -7px red;
+    padding: 10px;
+    margin-bottom: 30px;
+    background: white;
+    margin-right:20px;
+    margin-left:20px;
+}
+.card{
+    width: 20vw;
+}
+@media screen and (max-width:600px) {
+    .forms{
+        width:"60vw";
+        border: none;
+    }
+    .card{
+        width: 45vw;
+    }
+    .cards{
+        width: 40vw;
+    }
+}
+@media screen and (max-width:764px) {
+
+    
+    .card{
+        width: 45vw;
+    }
+    .cards{
+        width: 40vw;
+    }
+    .cardsss{
+        width:45vw
+    }
+}
+.cardsss{
+    width: 28vw;
+}
