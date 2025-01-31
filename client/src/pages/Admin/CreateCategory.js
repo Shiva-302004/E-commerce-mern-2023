@@ -16,7 +16,7 @@ const CreateCategory = () => {
   const handleCreate=(e)=>{
     e.preventDefault()
     try{
-      fetch("http://localhost:8000/create-category",{
+      fetch("https://e-commerce-mern-2023.onrender.com/create-category",{
         method:"POST",
         headers:{
           token:localStorage.getItem("authtoken"),

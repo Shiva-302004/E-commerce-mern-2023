@@ -21,7 +21,7 @@ const CreateProduct = () => {
   }
   const getAllCategory = async () => {
     try {
-      fetch("http://localhost:8000/all-category", {
+      fetch("https://e-commerce-mern-2023.onrender.com/all-category", {
         method: "get"
       })
         .then(res => res.json())
@@ -47,7 +47,7 @@ const CreateProduct = () => {
     let formdata=new FormData()
     formdata.append("product",image)
 
-    await fetch("http://localhost:8000/uploadimage",{
+    await fetch("https://e-commerce-mern-2023.onrender.com/uploadimage",{
       method:"POST",
       headers:{
         Accept:'application/json'
@@ -58,7 +58,7 @@ const CreateProduct = () => {
       product.photo=responsedata.path
       toast.success(responsedata.msg)
 
-      fetch("http://localhost:8000/create-product",{
+      fetch("https://e-commerce-mern-2023.onrender.com/create-product",{
         method:"POST",
         headers:{
           token:localStorage.getItem("authtoken"),

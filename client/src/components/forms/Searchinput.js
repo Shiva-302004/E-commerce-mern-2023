@@ -7,7 +7,7 @@ const Searchinput = () => {
     const handlesubmit=async(e)=>{
         try{
             e.preventDefault()
-            fetch(`http://localhost:8000/search-product/${value.keyword}`).then(res=>res.json()).then((data)=>{
+            fetch(`https://e-commerce-mern-2023.onrender.com/search-product/${value.keyword}`).then(res=>res.json()).then((data)=>{
                 setvalue({...value,result:data.data})
                 console.log(data.data)
                 loacation("/search")

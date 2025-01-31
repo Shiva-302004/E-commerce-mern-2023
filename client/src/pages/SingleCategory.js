@@ -8,7 +8,7 @@ const SingleCategory = () => {
     const params=useParams()
     const location=useNavigate()
     const getSingleCategoryProduct=()=>{
-        fetch(`http://localhost:8000/category-product/${params.id}`).then(res=>res.json()).then((data)=>{
+        fetch(`https://e-commerce-mern-2023.onrender.com/category-product/${params.id}`).then(res=>res.json()).then((data)=>{
             setproduct(data.data)
             console.log(data.data)
         })

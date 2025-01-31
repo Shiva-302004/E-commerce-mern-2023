@@ -26,7 +26,7 @@ const UpdateProduct = () => {
   }
   const getAllCategory = async () => {
     try {
-      fetch("http://localhost:8000/all-category", {
+      fetch("https://e-commerce-mern-2023.onrender.com/all-category", {
         method: "get"
       })
         .then(res => res.json())
@@ -45,7 +45,7 @@ const UpdateProduct = () => {
   const getsingleproduct=()=>{
     try{
         // let responsedata
-        fetch(`http://localhost:8000/single-products/${params.id}`).then(res=>res.json()).then((data)=>{
+        fetch(`https://e-commerce-mern-2023.onrender.com/single-products/${params.id}`).then(res=>res.json()).then((data)=>{
             if(data.success){
                 
                 setid(data.data._id)
@@ -79,7 +79,7 @@ const UpdateProduct = () => {
     if(image){
         formdata.append("product",image)
     
-        await fetch("http://localhost:8000/uploadimage",{
+        await fetch("https://e-commerce-mern-2023.onrender.com/uploadimage",{
           method:"POST",
           headers:{
             Accept:'application/json'
@@ -90,7 +90,7 @@ const UpdateProduct = () => {
           product.photo=responsedata.path
           toast.success(responsedata.msg)
     
-          fetch(`http://localhost:8000/update-product/${id}`,{
+          fetch(`https://e-commerce-mern-2023.onrender.com/update-product/${id}`,{
             method:"PUT",
             headers:{
               token:localStorage.getItem("authtoken"),
@@ -111,7 +111,7 @@ const UpdateProduct = () => {
 
     }
     }else{
-        fetch(`http://localhost:8000/update-product/${id}`,{
+        fetch(`https://e-commerce-mern-2023.onrender.com/update-product/${id}`,{
             method:"PUT",
             headers:{
               token:localStorage.getItem("authtoken"),
@@ -135,7 +135,7 @@ const UpdateProduct = () => {
     e.preventDefault()
     let ans=window.prompt("Are you sure")
     if(!ans) return
-    fetch(`http://localhost:8000/delete-products/${id}`,{
+    fetch(`https://e-commerce-mern-2023.onrender.com/delete-products/${id}`,{
         method:"DELETE",
         headers:{
             "Content-Type":"application/json",

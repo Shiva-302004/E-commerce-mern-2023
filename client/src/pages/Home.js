@@ -19,15 +19,15 @@ const Home = () => {
   const {Cart,setCart}=useCart()
   const location=useNavigate()
   const gettotal=()=>{
-    fetch("http://localhost:8000/product-count").then(res => res.json()).then((data) => settotal(data.count))
+    fetch("https://e-commerce-mern-2023.onrender.com/product-count").then(res => res.json()).then((data) => settotal(data.count))
   }
   // const location=useNavigate()
   const getAllproduct = () => {
-    fetch("http://localhost:8000/all-products").then(res => res.json()).then((data) => setproduct(data.data))
+    fetch("https://e-commerce-mern-2023.onrender.com/all-products").then(res => res.json()).then((data) => setproduct(data.data))
   }
   const getAllCategory = async () => {
     try {
-      fetch("http://localhost:8000/all-category", {
+      fetch("https://e-commerce-mern-2023.onrender.com/all-category", {
         method: "get"
       })
         .then(res => res.json())
@@ -67,7 +67,7 @@ const Home = () => {
   }
   const filterproduct=()=>{
     try{
-      fetch("http://localhost:8000/filter-products",{
+      fetch("https://e-commerce-mern-2023.onrender.com/filter-products",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -86,7 +86,7 @@ const Home = () => {
   const loadmore=()=>{
     try{
       setloading(true)
-      fetch(`http://localhost:8000/productper/${page}`).then(res=>res.json()).then((data)=>{
+      fetch(`https://e-commerce-mern-2023.onrender.com/productper/${page}`).then(res=>res.json()).then((data)=>{
         setloading(false)
         setproduct([...product,...data.data])
       })

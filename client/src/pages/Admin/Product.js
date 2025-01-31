@@ -9,7 +9,7 @@ const Product = () => {
     const location=useNavigate()
     const getAllProducts = () => {
         try {
-            fetch("http://localhost:8000/all-products", {
+            fetch("https://e-commerce-mern-2023.onrender.com/all-products", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

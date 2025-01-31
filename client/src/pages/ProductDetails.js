@@ -12,7 +12,7 @@ const ProductDetails = () => {
     const location=useNavigate()
     const getsingleproduct = () => {
         try {
-            fetch(`http://localhost:8000/single-products/${params.id}`).then(res => res.json()).then((data) => {
+            fetch(`https://e-commerce-mern-2023.onrender.com/single-products/${params.id}`).then(res => res.json()).then((data) => {
 
 
                 setProduct(data.data)
@@ -25,7 +25,7 @@ const ProductDetails = () => {
     }
     const getsinglecategory = async () => {
         try {
-            fetch(`http://localhost:8000/single-category/${product?.category}`).then(res => res.json()).then((data) => {
+            fetch(`https://e-commerce-mern-2023.onrender.com/single-category/${product?.category}`).then(res => res.json()).then((data) => {
                 setcategory(data.data?.name)
             })
         } catch (err) {
@@ -37,7 +37,7 @@ const ProductDetails = () => {
             
             product.category!==undefined?(
 
-                fetch(`http://localhost:8000/related-product/${product?.category}/${product?._id}`).then(res=>res.json()).then((data)=>{setrelatedProduct(data.data);console.log(data.data)})
+                fetch(`https://e-commerce-mern-2023.onrender.com/related-product/${product?.category}/${product?._id}`).then(res=>res.json()).then((data)=>{setrelatedProduct(data.data);console.log(data.data)})
             ):(setrelatedProduct(null))
             
         }catch(err){
